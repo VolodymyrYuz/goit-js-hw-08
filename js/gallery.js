@@ -63,14 +63,10 @@
 //     description: 'Lighthouse Coast Sea',
 //   },
 // ];
-// Прослуховування кліка по елементах галереї та відкриття великого зображення
 document.querySelector('.gallery').addEventListener('click', function (event) {
-  // Перевірка, чи клікнули на зображення
   if (event.target.tagName === 'IMG') {
-    // Отримання посилання на велике зображення
     var largeImageSrc = event.target.dataset.source;
     if (largeImageSrc) {
-      // Відкриття великого зображення за допомогою BasicLightbox
       var instance = basicLightbox.create(`
                 <img src="${largeImageSrc}" width="800" height="600">
             `);
